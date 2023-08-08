@@ -1,23 +1,22 @@
 <script lang="ts">
-  import svelteLogo from './assets/svelte.svg'
-  import viteLogo from '/vite.svg'
-  import Counter from './lib/Counter.svelte'
-
   import { Router, Link, Route } from 'svelte-routing'
   import About from './routes/About.svelte';
   import Home from "./routes/Home.svelte";
   
-  import '@skeletonlabs/skeleton/themes/theme-hamlindigo.css';
+  import '@skeletonlabs/skeleton/themes/theme-crimson.css';
+  import '@skeletonlabs/skeleton/styles/skeleton.css';
+  import './app.postcss';
 
-  import Check from './assets/check.svg'
+  import { SlideToggle } from '@skeletonlabs/skeleton';
+
+  let value: boolean = false;
 
   export let url = "/";
 </script>
 
 <main>
-  <body data-theme="hamlindigo">
-
-  <button type="button" class="btn-icon variant-filled">{Check}</button>
+  <SlideToggle name="slide" bind:checked={value} />
+  <body data-theme="crimson">
 
   <h1 class="h1-black">Texto centrado sample</h1>
   </body>
@@ -33,9 +32,3 @@
     </div>
   </Router>
 </main>
-
-<style>
-  .h1-black {
-    color: black;
-  }
-</style>
