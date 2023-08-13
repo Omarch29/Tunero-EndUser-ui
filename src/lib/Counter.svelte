@@ -5,6 +5,15 @@
   }
 </script>
 
-<button on:click={increment}>
-  count is {count}
+<button class="btn-cnt" on:click={increment}>
+  Count is {count}
 </button>
+<a href="/">Volver a Home</a>
+
+<style>
+  .btn-cnt {
+    text-align: center;
+    margin: auto;
+    display: flex;
+  }
+</style>
